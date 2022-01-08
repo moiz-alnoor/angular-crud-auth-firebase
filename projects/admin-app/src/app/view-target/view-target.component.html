@@ -1,0 +1,21 @@
+<h1>Target - Comapagins : </h1>
+
+<div class="container d-flex justify-content-center" *ngIf="isLoading" style="margin-top: 15em;">
+    <sa-spinner-round-outlined></sa-spinner-round-outlined>
+    </div>
+<div>
+    <span *ngIf="brands?.length > 0"> Brand :</span>
+    <span class="badge rounded-pill bg-primary m-2" *ngFor="let brand of brands">{{brand.name.name}}</span>
+</div>
+<div>
+    <span  *ngIf="campaigns?.length > 0"> Campaigns: </span>
+    <span class="badge rounded-pill bg-secondary m-2" *ngFor="let campaign of campaigns">{{campaign.combagine_name.combagine_name}}</span>
+
+</div>
+<div>
+    <span *ngIf="brands?.length > 0"> Call Target : </span>
+    <span class="badge rounded-pill bg-success m-2" *ngFor="let target of targets">{{target?.target}}</span>
+
+</div>
+
+

@@ -1,0 +1,27 @@
+
+<h1>Agent Schedule : </h1>
+ 
+<div class="container d-flex justify-content-center" *ngIf="isLoading" style="margin-top: 15em;">
+    <sa-spinner-round-outlined></sa-spinner-round-outlined>
+    </div>
+
+<table class="table table-hover" *ngIf="!isLoading" >
+<thead>
+    <tr>
+        <th>Agent-ID</th>
+        <th>Rest Hours</th>  
+        <th>Work Hours</th>     
+        <th>Shift Type</th>
+     
+    </tr>
+</thead>
+ <tbody>
+    <tr *ngFor='let schedule of schedules'>
+      <td>{{ schedule.field.user_email}}</td>
+      <td>{{ schedule.field.rest}}</td>
+      <td>{{ schedule.field.work_hour}}</td>
+      <td>{{ schedule.field.shift}}</td>
+     </tr>
+     
+ </tbody>
+</table>

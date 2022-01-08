@@ -1,0 +1,35 @@
+
+    
+    
+    <div class="container d-flex justify-content-center ">
+
+<div class="card mb-3" style="width: 940px; margin-top: 15em;">
+    <div class="container d-flex justify-content-center" *ngIf="isLoading" style="margin-top: 2em;">
+        <sa-spinner-round-outlined></sa-spinner-round-outlined>
+        </div>
+
+    <div class="row g-0">
+      <div class="col-md-6">
+        <img src="./../../assets/auth.png"class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <h2 class="card-title"> AtechyCallCenter </h2>
+          <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email</label>
+              <input id="size" type="email"  class="form-control" formControlName="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Password</label>
+                <input id="password" type="password"  class="form-control" formControlName="password" required>
+              </div>
+            <button class="btn btn-primary mb-3" type="submit" >Log In</button>
+            </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

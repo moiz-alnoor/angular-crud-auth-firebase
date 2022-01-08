@@ -1,0 +1,25 @@
+<h1>Agents Performance: </h1>
+
+
+
+<div class="container d-flex justify-content-center" *ngIf="isLoading" style="margin-top: 15em;">
+    <sa-spinner-round-outlined></sa-spinner-round-outlined>
+    </div>
+
+<table class="table table-hover" *ngIf="!isLoading" >
+<thead>
+    <tr>
+        <th>Agent-ID</th>
+        <th>Total Call he/she Served</th>       
+
+    </tr>
+</thead>
+ <tbody>
+    <tr *ngFor="let item of counts| keyvalue">
+      <td> {{ item.key }} </td>
+      <td>{{ item.value }}</td>
+
+     </tr>
+     
+ </tbody>
+</table>

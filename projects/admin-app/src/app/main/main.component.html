@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+  
+      <div class="col-2 mt-5">
+      
+        <ul class="list-group" *ngIf="role_id == 1">
+          <li class="list-group-item">  <a routerLink="/user-account">User Account</a>  </li>
+          <li class="list-group-item">  <a routerLink="/call-queue">Call Queue</a>  </li>
+          <li class="list-group-item">  <a routerLink="/agent-schedule">Manage Agent Schedule</a>  </li>
+          <li class="list-group-item">  <a routerLink="/call-log">Agents Call Log</a>  </li>
+          <li class="list-group-item">  <a routerLink="/target-compagin">Target Campaigns</a>  </li>
+          <li class="list-group-item">  <a routerLink="/agent-performance">Agents Performance </a>  </li>
+         </ul>
+
+        <ul class="list-group" *ngIf="role_id == 2">
+          <li class="list-group-item">  <a routerLink="/asign-agint">Asign Agent To Campaigns </a>  </li>
+          <li class="list-group-item">  <a routerLink="/call-log">Agents Call Log</a>  </li>
+          <li class="list-group-item">  <a routerLink="/agent-performance">Agents Performance </a>  </li>
+          <li class="list-group-item">  <a routerLink="/view-agent-schedule"> Agent Schedule </a>  </li>
+          <li class="list-group-item">  <a routerLink="/view-target"> Target - Campaigns </a>  </li>
+        </ul>
+
+        <ul class="list-group" *ngIf="role_id == 3">
+          <li class="list-group-item">  <a routerLink="/call-data">Fill Up Call Data</a>  </li>
+          <li class="list-group-item">  <a routerLink="/call-log">Agents Call Log</a>  </li>
+          <li class="list-group-item">  <a routerLink="/agent-performance">Agents Performance </a>  </li>
+          <li class="list-group-item">  <a routerLink="/view-agent-schedule"> Agent Schedule </a>  </li>
+          <li class="list-group-item">  <a routerLink="/view-target"> Target - Campaigns </a>  </li>
+        </ul>
+
+
+
+        <div class="mt-5">  
+            <p><fa-icon [icon]="faUser"></fa-icon> {{email}}</p> 
+            <p  (click)="logOut()"><fa-icon [icon]="faSignOutAlt"></fa-icon> Log Out</p>
+        </div>
+     
+  
+      </div>
+      <div class="col-10 mt-5">
+        <router-outlet></router-outlet>
+      </div>
+  
+    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+  

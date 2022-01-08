@@ -1,0 +1,38 @@
+
+<h1>User Account</h1>
+
+<lib-toastify-toast-container>
+</lib-toastify-toast-container>
+
+<div class="container d-flex justify-content-center" *ngIf="isLoading">
+<sa-spinner-round-outlined></sa-spinner-round-outlined>
+</div>
+
+
+
+<form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Select Role </label>
+        <select id="role_id" class="form-select"  formControlName="role_id" aria-label="Default select example" required>
+          <option selected>Open this select menu</option>
+          <option value="1">admin</option>
+          <option value="2">supervisor</option>
+          <option value="3">agent</option>
+        </select>
+    </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Agent-ID (email)</label>
+    <input id="email" type="email" min="1" class="form-control"  formControlName="email" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Set Default Password</label>
+    <input id="password" type="password" min="1" class="form-control"  formControlName="password" required>
+  </div>
+
+
+  <button class="btn btn-primary mb-3" type="submit" >Add User</button>
+</form>
+

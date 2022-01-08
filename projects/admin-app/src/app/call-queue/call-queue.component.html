@@ -1,0 +1,38 @@
+<h1>Call Queue Manage :</h1>
+
+<lib-toastify-toast-container>
+
+</lib-toastify-toast-container>
+
+<form [formGroup]="maximum_waiting_time" (ngSubmit)="maximumWaitingTime()">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Maximum Waiting Time/Minutes</label>
+    <input id="maximum_waiting_time" type="number" min="1" class="form-control"  formControlName="maximum_waiting_time" required>
+  </div>
+  <button class="btn btn-primary mb-3" type="submit" >Update</button>
+</form>
+
+
+<form [formGroup]="routing_strategie" (ngSubmit)="routingStrategie()">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"> Select Routing Strategie </label>
+    <select id="routing_strategie" class="form-select"  formControlName="routing_strategie" aria-label="Default select example" required>
+      <option selected>Open this select menu</option>
+      <option value="round robin">round robin</option>
+      <option value="ring all">ring all</option>
+      <option value="last used">last used</option>
+    </select>
+</div>
+<button class="btn btn-primary mb-3" type="submit" >Update</button>
+  </form>
+  <form [formGroup]="size" (ngSubmit)="queueSize()">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Queue Size</label>
+    <input id="size" type="number" min="1" class="form-control" formControlName="size" required>
+  </div>
+  <button class="btn btn-primary mb-3" type="submit" >Update</button>
+  </form>
+
+  
+
+

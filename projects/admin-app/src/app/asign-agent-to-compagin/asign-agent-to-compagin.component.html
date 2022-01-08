@@ -1,0 +1,31 @@
+
+<h1>Asign Agent To Compagin</h1>
+
+<lib-toastify-toast-container>
+</lib-toastify-toast-container>
+
+<form [formGroup]="asignAgentForm" (ngSubmit)="asignAgent()">
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"> Select Agent </label>
+    <select id="user_email" class="form-select"  formControlName="user_email" aria-label="Default select example" required>
+      <option selected>Open this select menu</option>
+      <option *ngFor="let agent of agents">{{agent?.email}}</option>
+    </select>
+</div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Select Campaigns </label>
+        <select id="compagine" class="form-select"  formControlName="compagine" aria-label="Default select example" required>
+          <option selected>Open this select menu </option>
+          <option value="">  </option>
+          <option value="complain"> complain </option>
+          <option value="request"> request </option>
+          <option value="query"> query </option>
+        </select>
+    </div>
+
+
+  <button class="btn btn-primary mb-3" type="submit" >Add</button>
+</form>
+

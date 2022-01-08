@@ -1,0 +1,37 @@
+
+<h1>Manage Agent Schedule : </h1>
+
+<lib-toastify-toast-container>
+</lib-toastify-toast-container>
+
+<form [formGroup]="agent_schedule" (ngSubmit)="agentSchedule()">
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Select Agent </label>
+        <select id="user_email" class="form-select"  formControlName="user_email" aria-label="Default select example" required>
+          <option selected>Open this select menu</option>
+          <option *ngFor="let agent of agents">{{agent?.email}}</option>
+        </select>
+    </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Work/Hours</label>
+    <input id="work_hour" type="number" min="1" class="form-control"  formControlName="work_hour" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"> Select Shift </label>
+    <select id="shift" class="form-select"  formControlName="shift" aria-label="Default select example" required> 
+      <option selected>Open this select menu</option>
+      <option value="moorning">moorning</option>
+      <option value="afternoon">afternoon</option>
+      <option value="night">night</option>
+    </select>
+</div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Rest/Hours</label>
+    <input id="rest" type="number" min="1" class="form-control"  formControlName="rest" required>
+  </div>
+
+  <button class="btn btn-primary mb-3" type="submit" >Add</button>
+</form>
+

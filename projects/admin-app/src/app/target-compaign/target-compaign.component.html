@@ -1,0 +1,40 @@
+
+<h1>Manage Target Campaigns : </h1>
+
+<lib-toastify-toast-container>
+</lib-toastify-toast-container>
+
+<form [formGroup]="brandForm" (ngSubmit)="addBrand()">
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">  Brand </label>
+        <input id="name" type="text"  class="form-control"  formControlName="name" required>
+  
+    </div>
+    <button class="btn btn-primary mb-3" type="submit" >Add</button>
+  </form>
+
+
+<form [formGroup]="compagineForm" (ngSubmit)="addCompagin()">
+
+  <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">  Campaigns </label>
+      <input id="combagine_name" type="text"  class="form-control"  formControlName="combagine_name" required>
+
+  </div>
+  <button class="btn btn-primary mb-3" type="submit" >Add</button>
+</form>
+
+
+
+<form [formGroup]="targetForm" (ngSubmit)="updateTarget()">
+
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Target Call/Day</label>
+    <input id="target" type="number" min="1" class="form-control"  formControlName="target" required>
+  </div>
+
+  <button class="btn btn-primary mb-3" type="submit" >Update</button>
+</form>
+

@@ -1,0 +1,39 @@
+<h1>Fill Up Call Data : </h1>
+
+<lib-toastify-toast-container>
+</lib-toastify-toast-container>
+
+<form [formGroup]="callDataForm" (ngSubmit)="callData()">
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Customer Name</label>
+        <input id="c_name" type="text" class="form-control" formControlName="c_name" required>
+      </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Select Brand</label>
+        <select id="brand" class="form-select"  formControlName="brand" aria-label="Default select example" required>
+          <option selected>Open this select menu</option>
+          <option *ngFor="let brand of brands">{{brand?.name.name}}</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"> Select Campaigns</label>
+        <select id="combagine" class="form-select"  formControlName="combagine" aria-label="Default select example" required>
+          <option selected>Open this select menu</option>
+          <option *ngFor="let combagine of combagines">{{combagine?.combagine_name.combagine_name}}</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Call Summary</label>
+    <textarea class="form-control" id="summary"  formControlName="summary"  rows="3"></textarea>
+</div>
+
+  <button class="btn btn-primary mb-3" type="submit" >Add</button>
+  </form>
+
+  
+
+
